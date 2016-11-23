@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2><%= @restaurant.name %></strong></h2>
+
+      <p>
+        <strong>Address:</strong>
+        <%= @restaurant.address %>
+      </p>
+
+      <p>
+        <strong>Tel number:</strong>
+        <%= @restaurant.phone_number %>
+      </p>
+
+      <p>
+        <strong>Category:</strong>
+        <%= @restaurant.category %>
+      </p>
+
+      <%= render 'restaurants/reviews' %>
+
+      <%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
+      </br>
+      <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+      <%= link_to 'Back', restaurants_path %>
+
+    </div>
+  </div>
+</div>
